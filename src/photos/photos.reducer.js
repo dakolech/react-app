@@ -1,4 +1,4 @@
-export const photos = (state = [], action) => {
+export const photosReducer = (state = [], action) => {
   switch (action.type) {
     default:
       return state
