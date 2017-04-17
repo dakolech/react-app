@@ -10,6 +10,9 @@ function Header({ push }) {
     <div className="Header">
       <div className="row header-background">
       </div>
+      <div className="avatar-container">
+        <div className="avatar"></div>
+      </div>
       <div className="row menu">
         <a onClick={() => push('/')}>
           <div className="icon-container">
