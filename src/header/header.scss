@@ -1,0 +1,40 @@
+.Header {
+  .header-background {
+    height: 200px;
+    background-image: url("../images/bg.jpg");
+    background-position-y: -229px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .menu {
+    height: 50px;
+    background-color: #7ad6bb;
+    text-align: right;
+    padding: 0 30px;
+
+    .icon-container {
+      height: 40px;
+      width: 40px;
+      display: inline-block;
+      margin: 5px 10px;
+      cursor: pointer;
+      position: relative;
+
+      &.circle {
+        border-radius: 50%;
+        border: 2px solid white;
+      }
+    }
+
+    i {
+      position: absolute;
+      font-size: 23px;
+      color: white;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+
+}
