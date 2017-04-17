@@ -1,17 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.scss';
+import { Route } from 'react-router';
+import { history } from './store';
+import { ConnectedRouter } from 'react-router-redux';
+import { HeaderComponent } from './header';
+import { PortfolioComponent } from './portfolio';
+import { PhotosComponent } from './photos';
 
 export function App() {
   return (
-    <div className="App">
-      <div className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h2>Welcome to React</h2>
+    <ConnectedRouter history={history}>
+      <div>
+        <HeaderComponent></HeaderComponent>
+        <Route exact path="/" component={PortfolioComponent}/>
+        <Route path="/photos" component={PhotosComponent}/>
       </div>
-      <p className="App-intro">
-        To get started, edit <code>src/App.js</code> and save to reload.
-      </p>
-    </div>
+    </ConnectedRouter>
   );
 }
