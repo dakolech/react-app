@@ -29,13 +29,8 @@ function Header({ push }) {
   );
 }
 
-
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({ push }, dispatch);
 }
 
-const mapStateToProps = state => ({
-  // order: state.newTournament.order,
-});
-
-export const HeaderComponent = connect(mapStateToProps, mapDispatchToProps)(Header);
+export const HeaderComponent = connect(null, mapDispatchToProps)(Header);

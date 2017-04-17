@@ -14,7 +14,6 @@ function* locationChanged({ payload: { pathname }}) {
         map(({ farm, server, id, secret }) => `https://farm${farm}.staticflickr.com/${server}/${id}_${secret}.jpg`),
         take(9)
       )(photos.photo);
-      console.log(photoUrls)
       yield put(savePhotos({ photoUrls }))
     } catch (err) {
       yield put(apiError({ err }))

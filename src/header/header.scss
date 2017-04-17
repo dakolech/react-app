@@ -1,13 +1,21 @@
-@import '../styles/variables';
-@import '../styles/mixins';
+@import '../styles/variables.scss';
+@import '../styles/mixins.scss';
 
 .Header {
+  margin-bottom: 20px;
+
   .header-background {
     background-image: url("../images/bg.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     height: 200px;
+    width: 100%;
+    margin: 0;
+    
+    @media (max-width: $screen-xs-max) {
+      height: 110px;
+    }
   }
 
   .avatar-container {
@@ -18,9 +26,16 @@
     position: absolute;
     left: 40px;
     top: 110px;
+    z-index: 10;
+
+    @media (max-width: $screen-xs-max) {
+      height: 110px;
+      width: 110px;
+      top: 70px;
+    }
 
     .avatar {
-      background-image: url(/static/media/avatar.c5e0107c.jpg);
+      background-image: url("../images/avatar.jpg");
       background-repeat: no-repeat;
       background-position: center center;
       background-size: 120%;
@@ -28,6 +43,10 @@
       height: 150px;
       width: 150px;
       @include absolute-center;
+      @media (max-width: $screen-xs-max) {
+        height: 100px;
+        width: 100px;
+      }
     }
   }
 
@@ -36,6 +55,8 @@
     height: 50px;
     padding: 0 30px;
     text-align: right;
+    width: 100%;
+    margin: 0;
 
     .icon-container {
       display: inline-block;
