@@ -1,67 +1,60 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
 .Header {
   .header-background {
-    height: 200px;
     background-image: url("../images/bg.jpg");
-    background-position-y: -229px;
-    //background-repeat: no-repeat;
-    //background-size: 100%;
-    background-position: center;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    height: 200px;
   }
 
   .avatar-container {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: $avatar-border-color;
     border-radius: 50%;
-    width: 165px;
     height: 165px;
+    width: 165px;
     position: absolute;
-    top: 110px;
     left: 40px;
+    top: 110px;
 
     .avatar {
       background-image: url(/static/media/avatar.c5e0107c.jpg);
-      border-radius: 50%;
-      width: 150px;
-      height: 150px;
       background-repeat: no-repeat;
       background-position: center center;
       background-size: 120%;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%,-50%);
+      border-radius: 50%;
+      height: 150px;
+      width: 150px;
+      @include absolute-center;
     }
   }
 
   .menu {
+    background-color: $menu-background-color;
     height: 50px;
-    background-color: #7ad6bb;
-    text-align: right;
     padding: 0 30px;
+    text-align: right;
 
     .icon-container {
+      display: inline-block;
+      cursor: pointer;
+      margin: 5px 10px;
       height: 40px;
       width: 40px;
-      display: inline-block;
-      margin: 5px 10px;
-      cursor: pointer;
       position: relative;
 
       &.circle {
+        border: 2px solid $menu-font-color;
         border-radius: 50%;
-        border: 2px solid white;
       }
     }
 
     i {
-      position: absolute;
+      @include absolute-center;
+      color: $menu-font-color;
       font-size: 23px;
-      color: white;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%,-50%);
     }
   }
 
