@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.scss';
 import { Route } from 'react-router';
 import { history } from './store';
 import { ConnectedRouter } from 'react-router-redux';
